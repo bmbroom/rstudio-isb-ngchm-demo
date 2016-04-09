@@ -7,6 +7,13 @@ The docker-compose file extends the ISB image with the
 [a small package (ISB-CGC-utils)](https://github.com/bmbroom/ISB-CGC-utils)
 containing example functions for creating NG-CHMs using data obtained from the ISB CGC cloud pilot.
 
+This system is designed to run on on any machine running
+[Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/).
+The machine concerned can be local to your environment or in
+any cloud environment that supports Docker (including but not limited to the
+[Google Compute Engine](https://cloud.google.com/compute/)).
+It is not designed for the Google Container engine.
+
 ## Usage
 
 Clone this repository to a machine running [Docker](https://www.docker.com/) version 10 or higher and [Docker Compose](https://docs.docker.com/compose/) version 1.6.2 or higher.
@@ -34,3 +41,5 @@ docker-compose file for creating a ready-to-use NG-CHM system.
 
 Once up and running, the home page for that server will provide instructions for connecting it with
 this RStudio system.
+The [R package](https://github.com/bmbroom/ISB-CGC-utils) documents how to
+create NG-CHMs.

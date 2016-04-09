@@ -1,13 +1,17 @@
 version: '2'
 
 services:
+    tcgaconfig:
+        image: bmbroom/ngchm-config-tcga
     rstudio:
-        #depends_on:
-        #  - rstudioInit
+        depends_on:
+          - tcgaconfig
         build:
           context: ./rstudio.build
         volumes:
           - rstudioData:/home/rstudio/data:rw
+        volumes_from:
+          - tcgaconfig
         ports:
           - "0.0.0.0:8787:8787"
 
